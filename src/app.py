@@ -20,8 +20,9 @@ warnings.filterwarnings('ignore')
 
 # Load the dataset - Replace 'sorted_events' with your actual dataset
 df = pd.read_excel('Events.xlsx')
+df = df.drop(columns=['Unnamed: 0'])
 
-data = df.drop(columns=['Unnamed: 0'])
+data = df
 
 # Select relevant features and target
 categorical_features = data[['Day of Week', 'Event Time']]
