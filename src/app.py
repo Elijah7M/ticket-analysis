@@ -133,7 +133,7 @@ day_of_week_dropdown_options = generate_dropdown_options('Day of Week', day_of_w
 # Create the event time dropdown options
 event_time_dropdown_options = generate_dropdown_options('Event Time', event_time_values, '12:30:00')
 
-opponent_dropdown_options = generate_dropdown_options('Opponents', opponent_options, 'all_oponents')
+opponent_dropdown_options = generate_dropdown_options('Opponents', opponent_options, 'all_opponents')
 
 app.layout = html.Div(style={'backgroundColor': 'transparent'}, children=[
     html.H1("Ticket Revenue and Sales Analysis by Season", style={'color': 'black'}),  # Change text color to black
