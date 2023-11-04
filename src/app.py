@@ -10,7 +10,7 @@ import traceback
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
-
+ 
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
@@ -21,7 +21,7 @@ warnings.filterwarnings('ignore')
 # Load the dataset - Replace 'sorted_events' with your actual dataset
 df = pd.read_excel('Events.xlsx')
 
-data = df
+data = df.drop(columns=['Unnamed: 0'])
 
 # Select relevant features and target
 categorical_features = data[['Day of Week', 'Event Time']]
