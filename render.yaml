@@ -5,7 +5,7 @@ services:
     env: python
     plan: free
     buildCommand: |
-      pip install --upgrade pip
+      /opt/render/project/src/.venv/bin/python3.10 -m pip install --upgrade pip
       pip install -r requirements.txt
     startCommand: "gunicorn --chdir src app:server"
     envVars:
